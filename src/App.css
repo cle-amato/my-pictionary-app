@@ -13,6 +13,10 @@
   }
 }
 
+.App h1 {
+  color: purple;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
