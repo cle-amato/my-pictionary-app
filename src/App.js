@@ -4,7 +4,7 @@ import Search from './Search';
 function App() {
   return (
     <div className="App">
-      <h1>Pictionary generator</h1>
+      <h1>Pictionary word generator</h1>
       <Search />
     </div>
   );

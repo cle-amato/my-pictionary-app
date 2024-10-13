@@ -1,0 +1,48 @@
+.generate-button {  
+  font-family: poppins, Arial, Helvetica, sans-serif;  
+  background-color: #9e7fe8;
+    color: white;
+    padding: 5px 10px;
+    border: 2px solid rgba(226, 223, 226, 0);
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  .generate-button:hover {
+    cursor: pointer;
+    transition: ease-in-out;
+    font-weight: bold;
+  }
+
+
+h3 {
+    font-size: 30px;
+    background-color: rgba(158, 127, 232, 0.5);
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  .CountdownTimer button {
+    font-family: poppins, Arial, Helvetica, sans-serif;  
+    color: hsl(258, 70%, 70%);
+    background-color: white;
+    padding: 5px 10px;
+    border: 1px solid rgba(158, 127, 232);
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  .CountdownTimer button:hover {
+    cursor: pointer;
+    transition: ease-in-out;
+    font-weight: bold;
+  }
+
+
+
+
+
+
+  
