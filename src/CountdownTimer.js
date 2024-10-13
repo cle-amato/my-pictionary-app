@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 
+
 export default function CountdownTimer() {
   const [time, setTime] = useState(120000);
   const [pause, setPause] = useState(false);
@@ -22,21 +23,29 @@ return () => clearInterval(timerRef.current);
   
   function handlePauseToggle(event) {
     event.preventDefault();
-    console.log("handle pause toggle triggered");
     setPause(!pause);
   }
   
-  const minutes = Math.floor(time / 60000);
-  const seconds = Math.floor((time % 60000 / 1000));
-  const hundredths = Math.floor((time % 1000) / 10);
+  const minutes = `${Math.floor(time / 60000)}`.padStart(2, 0);
+  const seconds = `${Math.floor((time % 60000 / 1000))}`.padStart(2,0);
+  const hundredths = `${Math.floor((time % 1000) / 10)}`.padStart(2,0);
+  const timeLeft = `${minutes}:${seconds}:${hundredths}`
 
-  return (
-    <div className="CountdownTimer">
-      <p>
-        Time left: {`${minutes}`.padStart(2, 0)}:
-        {`${seconds}`.padStart(2, 0)}:{`${hundredths}`.padStart(2, 0)}
-      </p>
-      <button onClick={handlePauseToggle}>{pause ? 'Resume' : 'Pause'}</button>
+  if (timeLeft != `00:00:00`) {
+    return (
+      <div className="CountdownTimer">
+        <p>
+          Time left: {timeLeft}
+        </p>
+        <button onClick={handlePauseToggle} className="pause-button">{pause ? 'Resume' : 'Pause'}</button>
+        <div><button className="restart-button">Restart game</button></div>
+      </div>
+    );
+  } else {
+    return <div>
+      <h2>time is up!</h2>
+    <button className="restart-button">Restart game</button>
     </div>
-  );
+  }
+  
 }
